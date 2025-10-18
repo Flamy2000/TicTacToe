@@ -9,12 +9,12 @@ public class Mark {
         this.player = player;
     }
 
-    public char GetPlayerChar(){
-        return player.GetPlayerChar();
+    public char getPlayerChar(){
+        return player.getPlayerChar();
     }
 
     @Override
     public String toString(){
-        return "" + player.GetPlayerChar();
+        return "" + player.getPlayerChar();
     }
 }

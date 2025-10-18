@@ -13,11 +13,11 @@ public class Player {
         score = 0;
     }
 
-    public void AddPoint(){
+    public void addPoint(){
         ++score;
     }
 
-    public char GetPlayerChar(){
+    public char getPlayerChar(){
         return this.playerChar;
     }
 
