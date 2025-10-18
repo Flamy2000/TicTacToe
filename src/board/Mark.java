@@ -9,6 +9,10 @@ public class Mark {
         this.player = player;
     }
 
+    public int getPlayerID(){
+        return player.getID();
+    }
+
     public char getPlayerChar(){
         return player.getPlayerChar();
     }

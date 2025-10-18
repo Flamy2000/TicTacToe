@@ -46,8 +46,12 @@ public class Board {
         this.hoverX = (hoverX + size) % size;
     }
 
-    public Mark[][] getBoard(){
-        return marks;
+    public int getSize(){
+        return size;
+    }
+
+    public boolean checkMark(int x, int y, Player player){
+        return marks[x][y].getPlayerID() == player.getID();
     }
 
     @Override

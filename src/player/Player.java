@@ -13,6 +13,10 @@ public class Player {
         score = 0;
     }
 
+    public int getID(){
+        return turnID;
+    }
+
     public void addPoint(){
         ++score;
     }
