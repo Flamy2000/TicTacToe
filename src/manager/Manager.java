@@ -1,8 +1,6 @@
 package manager;
 
 import board.Board;
-import board.Board.Direction;
-import board.Mark;
 import player.Player;
 
 public class Manager {
@@ -23,17 +21,8 @@ public class Manager {
         return players[turnPlayer];
     }
 
-    public void noveHover(Direction direction){
-        board.moveHover(direction);
-    }
-
     public boolean endTurn(int x, int y){
         boolean played = board.setMark(x, y, getTurnPlayer());
-        return validateEndTurn(played);
-    }
-
-    public boolean endTurn(){
-        boolean played = board.mark(getTurnPlayer());
         return validateEndTurn(played);
     }
 
@@ -57,7 +46,7 @@ public class Manager {
             // Rows
             for (int y = 0; y < board.getSize(); ++y){
                 sum = 0;
-                for (int x = 0; y < board.getSize(); ++y){
+                for (int x = 0; x < board.getSize(); ++x){
                     if (board.checkMark(x, y, player))
                         ++sum;
                 }
@@ -88,7 +77,7 @@ public class Manager {
             // ForwardSlash (/) Diagonal
             sum = 0;
             for (int i = 0; i < board.getSize(); ++i){
-                if (board.checkMark(i, board.getSize()-i, player))
+                if (board.checkMark(i, board.getSize()-i-1, player))
                     ++sum;
                 if (sum == board.getSize())
                     return player;

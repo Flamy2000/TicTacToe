@@ -27,6 +27,6 @@ public class Player {
 
     @Override
     public String toString(){
-        return "Player " + turnID + ": " + score;
+        return "Player " + (turnID+1) + ": " + score;
     }
 }
